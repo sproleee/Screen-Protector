@@ -1,6 +1,17 @@
 class Protector {
   constructor(options) {
-    this.options = options;
+    this.options = options || {
+      selectAll: true,
+      copy: true,
+      paste: true,
+      cut: true,
+      save: true,
+      viewSource: true,
+      print: true,
+      disableRightClick: true,
+      disableTextSelection: true,
+      disableImageDragging: true,
+    };
     this.keys = {
       selectAll: 65, // CTRL + A
       copy: 67, // CTRL + C
